@@ -19,7 +19,7 @@ public class NzbnServiceClient {
 
     private WebTarget servicenzbn;
 
-    /*	Building connection with article service	*/
+    /*	Building connection with service	*/
     public NzbnServiceClient() {
         try {
             // make a client with the json stuff enabled

@@ -1,6 +1,6 @@
 <Configuration packages="nz.co.foodstuffs" verbose="true">
 	<Properties>
-		<Property name="component">lms-article-adaptor-test</Property>
+		<Property name="component">core-nzbn-service-test</Property>
 		<Property name="log.dir">/tmp</Property>
 	</Properties>
 
