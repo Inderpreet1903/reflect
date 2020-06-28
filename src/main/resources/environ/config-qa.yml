@@ -1,0 +1,9 @@
+#QA - some local must be injected by bamboo..
+endpoint:
+  nzbnServiceEndpoint: "http://core-qa-ingress.test.fsniwaikato.kiwi/service/core-nzbn-service"
+
+customer:
+  single: "2100000853"
+  multiple: "2100000035"
+  type: "CNNW"
+  number: "6014355510001109"
