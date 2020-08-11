@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>nz.co.foodstuffs</groupId>
-    <artifactId>core-nzbn-service-test</artifactId>
+    <groupId>nz.co.trademe</groupId>
+    <artifactId>tradme-test</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -14,7 +14,9 @@
         <io.cucumber>5.6.0</io.cucumber>
         <surefire.version>3.0.0-M4</surefire.version>
         <glassfish.jersey>3.0.0-M1</glassfish.jersey>
-        <core-store-canonical-xsd-version>1.3.0</core-store-canonical-xsd-version>
+        <webdrivermanager.version>4.0.0</webdrivermanager.version>
+        <gherkin.version>14.0.1</gherkin.version>
+        <org.seleniumhq>4.0.0-alpha-6</org.seleniumhq>
     </properties>
 
     <dependencies>
@@ -22,17 +24,7 @@
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>gherkin</artifactId>
-            <version>12.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>${io.cucumber}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-junit</artifactId>
-            <version>${io.cucumber}</version>
+            <version>${gherkin.version}</version>
         </dependency>
         <dependency>
             <groupId>io.cucumber</groupId>
@@ -72,7 +64,60 @@
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${io.cucumber}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>${io.cucumber}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>${io.cucumber}</version>
+        </dependency>
+        <!--         https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager-->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdrivermanager.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${org.seleniumhq}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-api</artifactId>
+            <version>${org.seleniumhq}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>${org.seleniumhq}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-support</artifactId>
+            <version>${org.seleniumhq}</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>

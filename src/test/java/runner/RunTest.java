@@ -9,7 +9,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.env.OriginTrackedMapPropertySource;
 import org.springframework.boot.env.YamlPropertySourceLoader;
 import org.springframework.core.io.InputStreamResource;
-
 import java.io.IOException;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +18,7 @@ import java.util.Objects;
 @CucumberOptions(
     strict = true,
     features = "classpath:features",
-    glue = "nz.co.foodstuffs.core.nzbn.service.stepDefinitions",
+    glue = "nz.co.trademe.tests.stepDefinitions",
     plugin = {
         "html:target/cucumber-html-report",
         "json:target/json/cucumber.json"

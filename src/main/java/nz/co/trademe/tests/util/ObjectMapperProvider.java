@@ -1,4 +1,4 @@
-package nz.co.foodstuffs.core.nzbn.service.util;
+package nz.co.trademe.tests.util;
 
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.databind.ObjectMapper;

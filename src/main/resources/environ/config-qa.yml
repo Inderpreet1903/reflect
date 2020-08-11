@@ -1,3 +1,10 @@
 #QA - some local must be injected by bamboo..
 endpoint:
-  nzbnServiceEndpoint: "http://core-qa-ingress.test.fsniwaikato.kiwi/service/core-nzbn-service"
+  trademeServiceEndpoint: "https://api.tmsandbox.co.nz/v1"
+
+properties:
+  browser: "chrome"
+  url: "https://www.tmsandbox.co.nz/"
+
+0Auth:
+  token: "OAuth oauth_consumer_key=EEB9775EFAD88C5D3587E89AD76940DB, oauth_token=250301126C480BCF6F54AC3949C4EE14, oauth_signature_method=PLAINTEXT, oauth_signature=8F604CC62DB5112524CB0BAB030817A2%2611A3CA0D100C7615E0627650872AAC65"

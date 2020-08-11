@@ -1,6 +1,6 @@
-<Configuration packages="nz.co.foodstuffs" verbose="true">
+<Configuration packages="nz.co.trademe" verbose="true">
 	<Properties>
-		<Property name="component">core-nzbn-service-test</Property>
+		<Property name="component">trademe-test</Property>
 		<Property name="log.dir">/tmp</Property>
 	</Properties>
 
@@ -28,7 +28,7 @@
 		<AsyncLogger name="httpclient" level="info"/>
 
 		<AsyncLogger name="org.springframework.beans.factory" level="warn"/>
-		<AsyncLogger name="nz.co.foodstuffs" level="debug"/>
+		<AsyncLogger name="nz.co.trademe" level="debug"/>
 
 		<AsyncLogger name="org.glassfish.jersey" level="finest"/>
 
