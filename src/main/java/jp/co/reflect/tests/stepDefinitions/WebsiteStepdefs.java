@@ -60,4 +60,9 @@ public class WebsiteStepdefs {
     public void iFillTheFormToSubmit() {
         homePage.writeAReflection();
     }
+
+    @Then("I type the message to submit")
+    public void iTypeTheMessageToSubmit() {
+        homePage.writeAMessage();
+    }
 }

@@ -65,4 +65,11 @@ public class HomePage {
         find.webElement(By.xpath("//label[text()='Pick a day to write a diary about. *']")).submit();
         ThreadSleep.For(5);
     }
+
+    public void writeAMessage() {
+        find.webElement(By.xpath("//*[@id='textclear']")).click();
+        find.webElement(By.xpath("//*[@id='textclear']")).sendKeys("Text added to send message");
+        find.webElement(By.xpath("//*[@id='textclear']")).submit();
+        ThreadSleep.For(2);
+    }
 }

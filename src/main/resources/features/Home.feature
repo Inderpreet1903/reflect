@@ -23,3 +23,8 @@ Feature: Tests to verify the used car search and data
         Given I open the website
         When I click on button 'Write a Reflection'
         Then I fill the form to submit
+
+    Scenario: Automated test to write reflection
+        Given I open the website
+        When I click on button 'Write a Message'
+        Then I type the message to submit
