@@ -1,4 +1,4 @@
 
 properties:
-  browser: "safari"
+  browser: "chrome"
   url: "file:///Users/inderpreetsinghbedi/Downloads/sample/index.html"
