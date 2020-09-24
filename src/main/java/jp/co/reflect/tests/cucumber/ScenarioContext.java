@@ -1,6 +1,6 @@
-package nz.co.trademe.tests.cucumber;
+package jp.co.reflect.tests.cucumber;
 
-import nz.co.trademe.tests.enums.Context;
+import jp.co.reflect.tests.enums.Context;
 
 import java.util.HashMap;
 import java.util.Map;

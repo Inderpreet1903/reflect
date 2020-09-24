@@ -1,8 +1,8 @@
-package nz.co.trademe.tests.cucumber;
+package jp.co.reflect.tests.cucumber;
 
 
-import nz.co.trademe.tests.manager.PageObjectManager;
-import nz.co.trademe.tests.manager.TestDriverManager;
+import jp.co.reflect.tests.manager.PageObjectManager;
+import jp.co.reflect.tests.manager.TestDriverManager;
 
 public class TestContext {
     private TestDriverManager testDriverManager;

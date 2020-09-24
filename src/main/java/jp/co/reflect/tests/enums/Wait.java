@@ -1,4 +1,4 @@
-package nz.co.trademe.tests.enums;
+package jp.co.reflect.tests.enums;
 
 
 public enum Wait {

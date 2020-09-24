@@ -1,19 +1,13 @@
-package nz.co.trademe.tests.manager;
+package jp.co.reflect.tests.manager;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import nz.co.trademe.tests.cucumber.TestContext;
-import nz.co.trademe.tests.enums.DriverType;
+import jp.co.reflect.tests.cucumber.TestContext;
+import jp.co.reflect.tests.enums.DriverType;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.io.File;
+import org.openqa.selenium.safari.SafariDriver;
 
 public class TestDriverManager {
 
@@ -40,7 +34,7 @@ public class TestDriverManager {
                 driver = createChromeDriver();
                 break;
             case SAFARI:
-//                driver =
+                driver = createSafariDriver();
                 break;
         }
 
@@ -48,6 +42,11 @@ public class TestDriverManager {
             Assert.fail("Unable to initiate driver");
         }
         driver.manage().window().maximize();
+        return driver;
+    }
+
+    private WebDriver createSafariDriver() {
+        driver = new SafariDriver();
         return driver;
     }
 
@@ -62,7 +61,6 @@ public class TestDriverManager {
     public void closeDriver() {
         if (driver != null) {
             driver.close();
-            driver.quit();
         }
     }
 

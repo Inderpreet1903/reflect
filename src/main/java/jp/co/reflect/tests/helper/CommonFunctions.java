@@ -1,4 +1,4 @@
-package nz.co.trademe.tests.helper;
+package jp.co.reflect.tests.helper;
 
 public class CommonFunctions {
 

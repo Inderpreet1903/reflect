@@ -1,9 +1,9 @@
-package nz.co.trademe.tests.manager;
+package jp.co.reflect.tests.manager;
 
 
-import nz.co.trademe.tests.cucumber.TestContext;
-import nz.co.trademe.tests.pages.*;
-import nz.co.trademe.tests.webelement.FindWebElement;
+import jp.co.reflect.tests.cucumber.TestContext;
+import jp.co.reflect.tests.pages.HomePage;
+import jp.co.reflect.tests.webelement.FindWebElement;
 
 public class PageObjectManager {
 

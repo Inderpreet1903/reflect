@@ -4,14 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>nz.co.trademe</groupId>
-    <artifactId>tradme-test</artifactId>
+    <groupId>jp.co.reflect</groupId>
+    <artifactId>Reflect-test</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
         <surefire.version>3.0.0-M4</surefire.version>
         <junit.version>4.13-rc-1</junit.version>
-        <io.cucumber>5.6.0</io.cucumber>
+        <io.cucumber>6.5.1</io.cucumber>
         <surefire.version>3.0.0-M4</surefire.version>
         <glassfish.jersey>3.0.0-M1</glassfish.jersey>
         <webdrivermanager.version>4.0.0</webdrivermanager.version>

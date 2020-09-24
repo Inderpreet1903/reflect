@@ -1,8 +1,8 @@
-package nz.co.trademe.tests.webelement;
+package jp.co.reflect.tests.webelement;
 
-import nz.co.trademe.tests.cucumber.TestContext;
-import nz.co.trademe.tests.enums.Wait;
-import nz.co.trademe.tests.manager.TestDriverManager;
+import jp.co.reflect.tests.cucumber.TestContext;
+import jp.co.reflect.tests.enums.Wait;
+import jp.co.reflect.tests.manager.TestDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,19 +12,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
-import java.time.LocalDateTime;
 import java.util.List;
 
 
 public class FindWebElement {
 
     private static final By subFrame = By.xpath("//iframe[contains(@name, 'uxtabiframe')]");
-    private final By busyIndicatorElementEAM = By.className("busy-indicator");
     private final By loadingIndicator = By.xpath("//div[@class='LoadingIndicator']");
-    private final By mainAppFrame = By.xpath("//div[starts-with(@id, 'appPageKey')]/iframe");
-    private final By menuViewFrame = By.xpath("//iframe[contains(@id,'menuAndView')]");
-    private final By hansenViewFrame = By.xpath("//iframe[contains(@id,'hansenView')]");
-    private final By viewTabFrame = By.xpath("//iframe[contains(@id,'viewTab')]");
     private FluentWait<WebDriver> wait;
     private WebDriverWait busyIndicatorWait;
     private WebDriverWait extendedWait;

@@ -1,42 +1,42 @@
-<Configuration packages="nz.co.trademe" verbose="true">
-	<Properties>
-		<Property name="component">trademe-test</Property>
-		<Property name="log.dir">/tmp</Property>
-	</Properties>
+<Configuration packages="jp.co.reflect" verbose="true">
+    <Properties>
+        <Property name="component">reflect-test</Property>
+        <Property name="log.dir">/tmp</Property>
+    </Properties>
 
-	<Appenders>
-		<Console name="STDOUT" target="SYSTEM_OUT">
-			<PatternLayout pattern="%-5p %d [%t] %c: %m%n"/>
-		</Console>
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout pattern="%-5p %d [%t] %c: %m%n"/>
+        </Console>
 
-		<RollingFile name="ROLLING"
-					 fileName="${sys:log.dir}/${component}.log"
-					 filePattern="${sys:log.dir}/${component}-%i.log">
-			<PatternLayout pattern="%-5p %d [%t] %c: %m%n"/>
-			<Policies>
-				<SizeBasedTriggeringPolicy size="5 MB"/>
-			</Policies>
-			<DefaultRolloverStrategy max="3"/>
-		</RollingFile>
-	</Appenders>
+        <RollingFile name="ROLLING"
+                     fileName="${sys:log.dir}/${component}.log"
+                     filePattern="${sys:log.dir}/${component}-%i.log">
+            <PatternLayout pattern="%-5p %d [%t] %c: %m%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="5 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="3"/>
+        </RollingFile>
+    </Appenders>
 
-	<!-- You can set custom log levels per-package here -->
-	<Loggers>
-		<AsyncLogger name="com" level="info"/>
-		<AsyncLogger name="net" level="info"/>
-		<AsyncLogger name="org" level="info"/>
-		<AsyncLogger name="httpclient" level="info"/>
+    <!-- You can set custom log levels per-package here -->
+    <Loggers>
+        <AsyncLogger name="com" level="info"/>
+        <AsyncLogger name="net" level="info"/>
+        <AsyncLogger name="org" level="info"/>
+        <AsyncLogger name="httpclient" level="info"/>
 
-		<AsyncLogger name="org.springframework.beans.factory" level="warn"/>
-		<AsyncLogger name="nz.co.trademe" level="debug"/>
+        <AsyncLogger name="org.springframework.beans.factory" level="warn"/>
+        <AsyncLogger name="nz.co.reflect" level="debug"/>
 
-		<AsyncLogger name="org.glassfish.jersey" level="finest"/>
+        <AsyncLogger name="org.glassfish.jersey" level="finest"/>
 
-		<AsyncLogger name="jersey-tracing" level="finest"/>
+        <AsyncLogger name="jersey-tracing" level="finest"/>
 
-		<AsyncRoot level="error">
-			<AppenderRef ref="ROLLING"/>
-			<AppenderRef ref="STDOUT"/>
-		</AsyncRoot>
-	</Loggers>
+        <AsyncRoot level="error">
+            <AppenderRef ref="ROLLING"/>
+            <AppenderRef ref="STDOUT"/>
+        </AsyncRoot>
+    </Loggers>
 </Configuration>
