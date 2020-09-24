@@ -4,18 +4,16 @@ This README would normally document whatever steps are necessary to get your app
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* Repo is created for test automation of the reflection project
+
 
 ### How do I get set up? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Pull the code
+* open Configuration file named as config-qa.yml
+* Give the path of the project in URL
+* Run the command "mvn clean test"
+
 
 ### Contribution guidelines ###
 
