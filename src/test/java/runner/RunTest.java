@@ -21,7 +21,8 @@ import java.util.Objects;
     glue = "jp.co.reflect.tests.stepDefinitions",
     plugin = {
         "html:target/cucumber-html-report.html"
-    }
+    },
+    tags = "@browser"
 )
 
 

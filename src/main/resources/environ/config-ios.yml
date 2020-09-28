@@ -1,0 +1,13 @@
+properties:
+  browser: "ios"
+  url: "https://reflect-mobile-test.web.app/"
+
+appium:
+  device: "IOS"
+  appTest: "clubcard.app"
+  localAppiumServer: "http://0.0.0.0:4723/wd/hub"
+  deviceName: "iPhone 8"
+  udid: "7A4CAE38-17DE-4F33-ADA8-626831951001"
+  platformName: "iOS"
+  automationName: "XCUITest"
+  port: "4722"

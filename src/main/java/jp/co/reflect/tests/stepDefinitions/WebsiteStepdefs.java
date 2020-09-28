@@ -65,4 +65,9 @@ public class WebsiteStepdefs {
     public void iTypeTheMessageToSubmit() {
         homePage.writeAMessage();
     }
+
+    @And("I choose page {string}")
+    public void iChoosePageConditionTrend(String page) {
+        homePage.selectPage(page);
+    }
 }

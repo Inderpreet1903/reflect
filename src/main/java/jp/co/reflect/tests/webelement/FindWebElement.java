@@ -1,5 +1,9 @@
 package jp.co.reflect.tests.webelement;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.WaitOptions;
+import io.appium.java_client.touch.offset.PointOption;
 import jp.co.reflect.tests.cucumber.TestContext;
 import jp.co.reflect.tests.enums.Wait;
 import jp.co.reflect.tests.manager.TestDriverManager;
@@ -156,9 +160,25 @@ public class FindWebElement {
     }
 
 
-    private void highlightElement(WebElement element)
-    {
+    private void highlightElement(WebElement element) {
         ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='3px solid red'", element);
+    }
+
+    public void scrollDown(int times) {
+        int numTries = 0;
+//        if (isAndroid) {
+//            while (wait.until(d -> (List<MobileElement>) d.findElements(element)).size() == 0) {
+        for (int i = 0; i < times; i++) {
+            int heightScreen = testDriverManager.getDriver().manage().window().getSize().height;
+            int midScreen = heightScreen / 2;
+            int swipeAmount = heightScreen / 4;
+
+            TouchAction action = new TouchAction((AppiumDriver) driver);
+            action.press(PointOption.point(0, midScreen))
+                .waitAction(new WaitOptions().withDuration(Duration.ofMillis(1500)))
+                .moveTo(PointOption.point(0, swipeAmount))
+                .release().perform();
+        }
     }
 
 }

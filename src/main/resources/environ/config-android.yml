@@ -1,0 +1,14 @@
+properties:
+  browser: "Android"
+  url: "https://reflect-mobile-test.web.app/"
+
+appium:
+  appTest: "app-qa-release.apk"
+  localAppiumServer: "http://0.0.0.0:4721/wd/hub"
+  deviceName: "Pixel"
+  avd: "Y"
+  udid: "emulator-5554"
+  platformName: "Android"
+  appActivity: "com.google.android.apps.chrome.Main"
+  automationName: "UiAutomator2"
+  port: "4721"

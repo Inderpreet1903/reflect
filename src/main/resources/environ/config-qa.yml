@@ -1,4 +1,4 @@
 
 properties:
   browser: "chrome"
-  url: "file:///Users/inderpreetsinghbedi/Downloads/sample/index.html"
+  url: "https://reflect-mobile-test.web.app/"

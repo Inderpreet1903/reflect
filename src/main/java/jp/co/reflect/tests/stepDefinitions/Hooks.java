@@ -6,6 +6,7 @@ import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import jp.co.reflect.tests.cucumber.TestContext;
+import jp.co.reflect.tests.enums.DriverType;
 import jp.co.reflect.tests.manager.TestDriverManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -30,9 +31,10 @@ public class Hooks {
 
     @AfterStep
     public void afterStep(Scenario scenario) {
-        byte[] imageBytes = ((TakesScreenshot) testDriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);
-        scenario.attach(imageBytes, "image/png", "image");
-
+        if (testDriverManager.getDriverType() != DriverType.ANDROID) {
+            byte[] imageBytes = ((TakesScreenshot) testDriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(imageBytes, "image/png", "image");
+        }
     }
 
     @After

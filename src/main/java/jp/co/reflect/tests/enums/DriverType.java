@@ -1,7 +1,8 @@
 package jp.co.reflect.tests.enums;
 
-public enum DriverType
-{
+public enum DriverType {
     CHROME,
-    SAFARI
+    SAFARI,
+    IOS,
+    ANDROID
 }
